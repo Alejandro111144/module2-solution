@@ -1,0 +1,89 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Section Styles */
+  .box {
+    border: 1px solid black;
+    padding: 20px;
+    position: relative;
+    color: white;
+  }
+  
+  .box .title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid black;
+  }
+  
+  /* Background Colors */
+  .chicken {
+    background-color: #FFA07A;
+  }
+  
+  .beef {
+    background-color: #FFD700;
+  }
+  
+  .sushi {
+    background-color: #90EE90;
+  }
+  
+  /* Media Queries for Responsive Design */
+  /* Desktop View (992px and above) */
+  @media (min-width: 992px) {
+    .box {
+      flex: 1;
+    }
+  }
+  
+  /* Tablet View (768px to 991px) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    main {
+      justify-content: space-between;
+    }
+  
+    .box {
+      width: calc(50% - 10px);
+    }
+  
+    .box:nth-child(3) {
+      width: 100%;
+    }
+  }
+  
+  /* Mobile View (767px and below) */
+  @media (max-width: 767px) {
+    .box {
+      width: 100%;
+    }
+  }
+  
